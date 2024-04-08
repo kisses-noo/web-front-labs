@@ -30,3 +30,19 @@ a:active {
     color: black;
     opacity: 0.3;
 }
+
+div.menu {
+    border: 5px solid #39e0398d;
+    border-radius: 20px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: #0dea8710;
+    box-shadow: 0 0 30px #00000030;
+}
+
+div.h11 {
+    text-align: center;
+}
