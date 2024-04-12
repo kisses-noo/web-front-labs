@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../maim.css">
+    <link rel="shortcut icon" href="lab3/citations.html" type="image/x-icon">
+    <link rel="icon" href="lab3/favicon-16x16.png">
+    <link rel="icon" href="lab3/favicon-32x32.png">
+</head>
+<style>
+    div {
+        width: 300px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background-color: white;
+        border: 1px dotted darkgreen;
+        margin: 15px;
+    }
+    .position-relative {
+        position: relative;
+        left: 150px;
+        top: -130px;
+        z-index: -1;
+    }
+
+    .position-absolute {
+        position: absolute;
+        left: 300px;
+    }
+
+    .position-absolute:hover {
+        position: absolute;
+        left: 300px;
+        background-color: rgb(132, 132, 228);
+        box-shadow: 10px 5px 5px red;
+        transform: scale(1.2);
+    }
+
+</style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+
+    <main>
+        <div>static</div>
+        <div>static</div>
+        <div class="position-relative">relative</div>
+        <div>static</div>
+        <div>static</div>
+        <div class="position-absolute">absolute</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
