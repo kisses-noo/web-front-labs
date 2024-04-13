@@ -16,6 +16,15 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+
+        function showAuthor() {
+            let author = "Автор страницы:\nАндреичева Алина Георгиевна"
+            alert(author);
+        }
+
+        function WelcomMessage() {
+            alert("Приветствую вас на моей странице!\nЦитата Джорджа Лукаса:\nЕсли вы хотите сделать что-то великое в один прекрасный день, помните: один прекрасный день-это сегодня.");
+        }
     </script>
 
     <style>
@@ -28,10 +37,17 @@
             text-align: center;
             cursor: pointer;
         }
+        header{
+            cursor: pointer;
+        }
+
+        footer{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 4
     </header>
 
@@ -40,12 +56,12 @@
             Сколько будет 5154+7891?
         </div>
 
-        <div class="message">
+        <div class="message" onclick="showAuthor()">
             Узнать, кто автор страницы
         </div>
     </main>
 
-    <footer>
+    <footer onclick="WelcomMessage()">
         &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
     </footer>
     
