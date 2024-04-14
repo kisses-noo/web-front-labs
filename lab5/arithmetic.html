@@ -62,6 +62,14 @@
         function WelcomMessage() {
             alert("Приветствую вас на моей странице!\nЦитата Джорджа Лукаса:\nЕсли вы хотите сделать что-то великое в один прекрасный день, помните: один прекрасный день-это сегодня.");
         }
+
+        function changeOutput(buttonNum, backColor, textColor, borderW) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderWidth = borderW
+        }
     </script>
 
     <style>
@@ -81,6 +89,12 @@
         footer{
             cursor: pointer;
         }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -95,10 +109,19 @@
         <div class="message" onclick="showDifference()">Найти разность чисел</div>
         <div class="message" onclick="showProduct()">Найти произведение чисел</div>
         <div class="message" onclick="showDivision()">Найти деление чисел</div>
-        
+
         <div class="message" onclick="showAuthor()">
             Узнать, кто автор страницы
         </div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', '4px')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'dashed', '4px')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'grey', 'orange', 'double', '4px')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'lightgreen', 'blue', 'groove', '4px')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="WelcomMessage()">
