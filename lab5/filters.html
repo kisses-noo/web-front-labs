@@ -21,12 +21,12 @@
             document.getElementById('brightnessImage').style.filter = 'brightness(' + value + ')';
         }
 
-        function contrastChange() {
-            let value = document.getElementById('contrastValue').value + '%';
+        function contrastChange() { 
+            let value = document.getElementById('contrastValue').value + '%'; 
             document.getElementById('contrastOutput').innerText = value;
             document.getElementById('contrastImage').style.filter = 'contrast(' + value + ')';
         }
-
+       
         function grayscaleChange() {
             let value = document.getElementById('grayscaleValue').value + '%';
             document.getElementById('grayscaleOutput').innerText = value;
@@ -80,7 +80,7 @@
         <div><img src="cat.jpg" id="brightnessImage" style="height: 500px;"></div>
 
         <div>
-            Фильтр contrast:
+            Фильтр contrast :
             <input type="range" min="0" max="500" value="100" onchange="contrastChange()" id="contrastValue">
             <span id="contrastOutput"></span>
         </div>
