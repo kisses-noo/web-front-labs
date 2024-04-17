@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../maim.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+
+    <script>
+        function hideCircle(circle) {
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+
+        function resetCircles() {
+            var circles = document.querySelectorAll('.circle');
+            circles.forEach(function(circle) {
+                circle.style.opacity = '1';
+                circle.style.width = '100px';
+                circle.style.height = '100px';
+            });
+        }
+
+    </script>
+
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            position: absolute;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+
+    <main>
+        <div class="circle" style="background-color: red; top: 500px; left: 200px;" onclick="hideCircle(this)">1</div>
+        <div class="circle" style="background-color: blue; top: 150px; left: 100px;" onclick="hideCircle(this)">2</div>
+        <div class="circle" style="background-color: green; top: 70px; left: 180px;" onclick="hideCircle(this)">3</div>
+        <div class="circle" style="background-color: yellow; top: 380px; left: 470px;" onclick="hideCircle(this)">4</div>
+        <div class="circle" style="background-color: purple; top: 250px; left: 450px;" onclick="hideCircle(this)">5</div>
+        <div class="circle" style="background-color: orange; top: 550px; left: 550px;" onclick="hideCircle(this)">6</div>
+        <div class="circle" style="background-color: cyan; top: 200px; left: 350px;" onclick="hideCircle(this)">7</div>
+        <div class="circle" style="background-color: magenta; top: 300px; left: 60px;" onclick="hideCircle(this)">8</div>
+        <div class="circle" style="background-color: brown; top: 80px; left: 400px;" onclick="hideCircle(this)">9</div>
+        <div class="circle" style="background-color: pink; top: 400px; left: 100px;" onclick="hideCircle(this)">10</div>
+        <button onclick="resetCircles()">Сбросить</button>
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
