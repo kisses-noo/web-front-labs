@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. Лабораторная 5</title>
+    <link rel="stylesheet" href="../maim.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+</head>
+
+<style>
+    .color {
+        border: 1px solid #1d83ff;
+        color: blue;
+        text-align: center;
+        width: 300px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: #ffff45;
+        box-shadow: 0 0 10px rgba(77, 48, 8, 0.536);
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+    }
+</style>
+
+<script>
+    function changeColor(div) {
+        if(div.style.backgroundColor == "yellow") {
+            div.style.backgroundColor = "red";
+            div.style.color = "lightgreen";
+            document.getElementById('color-name').innerHTML = 'красный';
+        }
+        else if(div.style.backgroundColor == "red") {
+            div.style.backgroundColor = "black";
+            div.style.color = "white";
+            document.getElementById('color-name').innerHTML = 'черный';
+        }
+        else if(div.style.backgroundColor == "black") {
+            div.style.backgroundColor = "green";
+            div.style.color = "yellow";
+            document.getElementById('color-name').innerHTML = 'зеленый';
+        }
+        else if(div.style.backgroundColor == "green") {
+            div.style.backgroundColor = "purple";
+            div.style.color = "black";
+            document.getElementById('color-name').innerHTML = 'фиолетовый';
+        }
+        else if(div.style.backgroundColor == "purple") {
+            div.style.backgroundColor = "orange";
+            div.style.color = "darkgreen";
+            document.getElementById('color-name').innerHTML = 'оранжевый';
+        }
+
+        else {
+            div.style.backgroundColor = "yellow";
+            div.style.color = "blue";
+            document.getElementById('color-name').innerHTML = 'жёлтый';
+        }
+    }
+</script>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">жёлтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>

@@ -12,16 +12,27 @@
 
 <style>
     .game {
-    border: 1px solid #ccc;
-    border-radius: 100px;
-    text-align: center;
-    border-radius: 40px;
-    width: 400px;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(77, 48, 8, 0.536);
-}
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        text-align: center;
+        border-radius: 40px;
+        width: 400px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(77, 48, 8, 0.536);
+    }
+
+    .help {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 400px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(77, 48, 8, 0.3);
+        }
+    
 
 </style>
 <script>
@@ -82,6 +93,15 @@
             document.getElementById('try-count').innerHTML = count;
         }
     }
+    function showRules() {
+        document.getElementById('showRulesBtn').style.display = 'none';
+        document.getElementById('rules').style.display = 'block';
+    }
+
+    function hideRules() {
+        document.getElementById('showRulesBtn').style.display = 'block';
+        document.getElementById('rules').style.display = 'none';
+    }
 </script>
 <body>
     <header>
@@ -115,6 +135,21 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть ещё раз</buttor>
+            </div>
+        </div>
+
+        <div class="help">
+            <button id="showRulesBtn" onclick="showRules()">Показать правила игры</button>
+            <div id="rules" style="display: none;">
+                <button onclick="hideRules()">Скрыть правила игры</button>
+                <ol type="I">
+                    <li>Сначала нажмите на кнопку "Сыграть в игру"</li>
+                    <li>Компьютер загадывает случайное число от 1 до 100.</li>
+                    <li>Вы должны угадать это число, вводя свои предположения в поле ввода.</li>
+                    <li>Если введенное число больше загаданного, выводится сообщение "Вы ввели слишком большое число".</li>
+                    <li>Если введенное число меньше загаданного, выводится сообщение "Вы ввели слишком маленькое число".</li>
+                    <li>Игра продолжается до тех пор, пока вы не угадаете число.</li>
+                </ol>
             </div>
         </div>
     </main>
