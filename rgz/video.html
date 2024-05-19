@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. РГЗ. Задание 5.</title>
+    <link rel="stylesheet" href="../rgz.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #2d2c2c;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #ff9900;
+        padding: 20px;
+    }
+
+    header h1 {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    h2 {
+        color: #353535;
+        border-bottom: 2px solid #ff6600;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+        border-left: 4px solid #626262;
+        border-right: 4px solid #626262;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ul {
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #d4d2d2;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+</style>
+
+<script>
+
+    let menuVisible = false;
+
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        if (menuVisible) {
+            menu.style.display = 'none';
+            menuVisible = false;
+        } else {
+            menu.style.display = 'block';
+            menuVisible = true;
+        }
+    }
+
+</script>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="Логотип ООО Банк 'Оранжевый'" 
+            style="width: 300px; margin: 0px auto 0px auto; display: block">
+            <h1 style="text-align: center;">Банк "Оранжевый"</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="menu" id="menu">
+            <a href="company.html">О компании</a>
+            <a href="news.html">Новости</a>
+            <a href="exchange_rate.html">Курс валют</a>
+            <a href="contact.html">Контактные данные</a>
+            <a href="video.html" class="current">Видео</a>
+        </nav>
+        <h2>Банк Оранжевый: Как войти в личный кабинет? | Как восстановить пароль?</h2>
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/wqzfPWY7nTU?si=9qLILbtAuhgxLfeQ" 
+           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+           gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h3 style="padding-left: 15px;">Описание:</h3>
+        <p>
+            Вы узнаете, как войти в личный кабинет на официальном сайте Банка Оранжевый. Подробные указания по удобному и 
+            быстрому доступу в bankorange.ru со скриншотами и видеоинструкцией. Наглядное руководство по восстановлению 
+            забытого пароля к личному кабинету банка. У нас представлена только самая актуальная информация.
+        </p>
+        
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>

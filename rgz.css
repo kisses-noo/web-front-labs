@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(126, 127, 134);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    text-decoration: none;
+}
+
+a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: 1s 2s;
+}
+
+a:link {
+    color:rgb(234, 54, 18);
+}
+
+a:visited {
+    color:rgb(255, 41, 41);
+}
+
+a:hover {
+    color:rgb(33, 222, 52);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 60px 20px 20px 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.menu a.current {
+    color: #ff6600;
+}
+
+footer {
+    background-color: rgb(69, 67, 75);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+main {
+    margin: 10px 20px 56px;
+}

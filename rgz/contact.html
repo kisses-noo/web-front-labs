@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. РГЗ. Задание 4.</title>
+    <link rel="stylesheet" href="../rgz.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #2d2c2c;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #ff9900;
+        padding: 20px;
+    }
+
+    header h1 {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    h2 {
+        color: #ff6600;
+        border-bottom: 2px solid #ff6600;
+        padding-bottom: 5px;
+    }
+
+    h3 {
+        color: #ff6600;
+        border-left: 4px solid #ff6600;
+        padding-left: 10px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    ul {
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #d4d2d2;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ebe6e0;
+        border: 1px solid #d4d2d2;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+</style>
+
+<script>
+
+    let menuVisible = false;
+
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        if (menuVisible) {
+            menu.style.display = 'none';
+            menuVisible = false;
+        } else {
+            menu.style.display = 'block';
+            menuVisible = true;
+        }
+    }
+
+</script>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="Логотип ООО Банк 'Оранжевый'" 
+            style="width: 300px; margin: 0px auto 0px auto; display: block">
+            <h1 style="text-align: center;">Банк "Оранжевый"</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="menu" id="menu">
+            <a href="company.html">О компании</a>
+            <a href="news.html">Новости</a>
+            <a href="exchange_rate.html">Курс валют</a>
+            <a href="contact.html" class="current">Контактные данные</a>
+            <a href="video.html">Видео</a>
+        </nav>
+
+        <h1 style="text-align: center;">Контактные данные</h1>
+        <div class="card">
+            <h2>Телефоны</h2>
+            <ul>
+                <li>Для звонков по России (физические лица): 8 800 500 80 88</li>
+                <li>Для звонков по России (юридические лица): 8 800 250 84 82</li>
+                <li>Для звонков по всему миру: +7 812 332 03 17</li>
+            </ul>
+            <h2>Факс</h2>
+            <p>+7 812 332 74 66</p>
+            <h2>E-mail</h2>
+            <ul>
+                <li><a href="mailto:client@bankorange.ru">client@bankorange.ru</a> (физ. лица)</li>
+                <li><a href="mailto:help@bankorange.ru">help@bankorange.ru</a> (юр. лица)</li>
+            </ul>
+        </div>
+        <h1 style="text-align: center;">Отделения</h1>
+        <div class="card">
+            <h2>Головной офис</h2>
+            <p>190013, Санкт-Петербург, ул. Рузовская, д. 16, лит. А, помещение 13-Н</p>
+            <p><b style="color: red;">●</b> м. Пушкинская</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.0011958073324!2d30.3302227!3d59.9155275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963053ee0a6011%3A0xa9308d530281af81!2z0KDRg9C30L7QstGB0LrQsNGPINGD0LsuLCAxNiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MDAxMw!5e0!3m2!1sru!2sru!4v1715857187734!5m2!1sru!2sru" 
+            width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="card">
+            <h2>Филлиал в городе Москва</h2>
+            <p>107078, Москва, ул. Мясницкая, д. 48</p>
+            <p><b style="color: red;">●</b> м. Красные ворота</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.400340757184!2d37.6456347!3d55.7689185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a649dfa43e9%3A0x1f2bbfd9dfb86810!2z0JzRj9GB0L3QuNGG0LrQsNGPINGD0LsuLCA0OCwg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1715857259113!5m2!1sru!2sru" 
+            width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
