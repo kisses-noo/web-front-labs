@@ -30,6 +30,17 @@
             margin-bottom: 10px;
         }
 
+        .colored-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+        }
+
     </style>
 
     <script>
@@ -104,6 +115,25 @@
                 main.appendChild(newBlock); 
             }
         }
+
+        function addColoredCircles() {
+            let main = document.querySelector('main');
+            let circleCountInput = document.getElementById('circleCount');
+            let circleCount = parseInt(circleCountInput.value) || 10;
+            for (let i = circleCount; i >= 1; i--) {
+                let newCircle = document.createElement('div');
+                newCircle.classList.add('colored-circle');
+                newCircle.innerHTML = i;
+
+                if (i % 2 !== 0) {
+                    newCircle.style.backgroundColor = 'red';
+                } else {
+                    newCircle.style.backgroundColor = 'green';
+                }
+
+                main.appendChild(newCircle);
+            }
+        }
     </script>
 </head>
 <body>
@@ -118,6 +148,8 @@
         <button onclick="add20_50()">20 => 50</button>
         <button onclick="add10_minus80()">10 => -80</button>
         <button onclick="createTransparentBlocks()">Создать прозрачные блоки</button>
+        <input type="number" id="circleCount" placeholder="Количество кругов">
+        <button onclick="addColoredCircles()">Цветные круги</button>
     </main>
 
     <footer>
