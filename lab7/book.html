@@ -15,6 +15,21 @@
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
+
+        .new-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: blue;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            margin: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
     </style>
 
     <script>
@@ -64,6 +79,31 @@
             }
 
         }
+
+        function add10_minus80() {
+            let main = document.querySelector('main');
+            for (let i = 10; i >= -80; i -= 3) {
+                let newCircle = document.createElement('div');
+                newCircle.classList.add('new-circle');
+                newCircle.innerHTML = i;
+
+                main.appendChild(newCircle);
+            }
+        }
+
+        function createTransparentBlocks() {
+            let main = document.querySelector('main');
+            for (let i = 0; i < 10; i++) {
+                let newBlock = document.createElement("div");
+                newBlock.classList.add("new-block");
+                newBlock.style.width = "200px";
+                newBlock.style.height = "40px";
+                newBlock.style.backgroundColor = "yellow";
+                newBlock.style.opacity = (i + 1) / 10;
+                newBlock.textContent = `Блок ${i + 1}`;
+                main.appendChild(newBlock);
+            }
+        }
     </script>
 </head>
 <body>
@@ -76,6 +116,8 @@
         <button onclick="addNewBlock()">Добавить блок</button>
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20 => 50</button>
+        <button onclick="add10_minus80()">10 => -80</button>
+        <button onclick="createTransparentBlocks()">Создать прозрачные блоки</button>
     </main>
 
     <footer>
