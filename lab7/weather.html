@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../maim.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        button {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px 20px;
+            background-color: #76dd76;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .weather-info {
+            padding: 20px;
+            border: 5px solid #83ce68;
+            background-color: #ffffff94;
+            border-radius: 5px;
+        }    
+    </style>
+    <script>
+        function Weather() {
+            const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+            fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                const temperatures = json.hourly.temperature_2m;
+                const morningTemp = temperatures[8].toFixed(1);
+                const noonTemp = temperatures[12].toFixed(1);
+                const eveningTemp = temperatures[20].toFixed(1);
+
+                const infoElement = document.getElementById('weather-info');
+                infoElement.innerHTML = `
+                    <h2>Температура в Новосибирске</h2>
+                    <p>Утром (8:00): ${morningTemp}°C</p>
+                    <p>В полдень (12:00): ${noonTemp}°C</p>
+                    <p>Вечером (20:00): ${eveningTemp}°C</p>
+                    <div class="source">
+                        Источник: <a href="https://open-meteo.com/" target="_blank">open-meteo.com</a>
+                    </div>
+                `;
+            })
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button class="btn" onclick="Weather()">Прогноз погоды для Новосибирска на сегодняшний день</button>
+        <div id="weather-info" class="weather-info"></div>
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
