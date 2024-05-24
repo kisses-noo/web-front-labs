@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреичева Алина Георгиевна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../maim.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        button {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px 20px;
+            background-color: #76dd76;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .euro-info {
+            padding: 20px;
+            border: 5px solid #83ce68;
+            background-color: #ffffff94;
+            border-radius: 5px;
+        }
+        .difference {
+            font-weight: bold;
+        }
+        .difference.Поднялся {
+            color: green;
+        }
+        .difference.Опустился {
+            color: red;
+        }
+    </style>
+    <script>
+        function getEuroExchangeRate() {
+            const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+            fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                const currentRate = json.Valute.EUR.Value;
+                const previousRate = json.Valute.EUR.Previous;
+                const requestDate = new Date(json.Date).toLocaleDateString();
+                const difference = currentRate - previousRate;
+                const diffStatus = difference >= 0 ? 'Поднялся' : 'Опустился';
+
+                const infoElement = document.getElementById('euro-info');
+                infoElement.innerHTML = `
+                    <h2>Текущий курс евро</h2>
+                    <p>Дата запроса: ${requestDate}</p>
+                    <p>Курс евро: ${currentRate.toFixed(2)} рублей</p>
+                    <p>Курс евро за прошлую дату: ${previousRate.toFixed(2)} рублей</p>
+                    <p class="difference ${diffStatus}">Разница: ${Math.abs(difference).toFixed(2)} рублей (${diffStatus})</p>
+                    <div class="source">
+                        Источник: <a href="https://www.cbr-xml-daily.ru/" target="_blank">cbr-xml-daily.ru</a>
+                    </div>
+                `;
+            })
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="getEuroExchangeRate()">Курс евро</button>
+        <div id="euro-info" class="euro-info"></div>
+    </main>
+
+    <footer>
+        &copy; Алина Андреичева, ФБИ-23, 2 курс, 2023
+    </footer>
+    
+</body>
+</html>
