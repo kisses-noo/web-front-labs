@@ -13,4 +13,15 @@ function showDate() {
     out.innerHTML += '<br>Текущая дата: ' + today.getDate();
     out.innerHTML += '<br>День недели: ' + today.toLocaleString('ru-RU', { weekday: 'long' });
 
+    document.getElementById('submit-button').addEventListener('click', function() {
+        let day = document.getElementById('day').value;
+        let month = document.getElementById('month').value;
+        let year = document.getElementById('year').value;
+
+        let date = new Date(year, month - 1, day);
+    
+        document.getElementById('result').textContent = 'День недели: ' + date.toLocaleString('ru-RU', { weekday: 'long' });
+      });
+
 }
+
